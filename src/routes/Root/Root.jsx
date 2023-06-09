@@ -8,28 +8,39 @@ import pokemonLogo from "../../resources/pokemon-logo.png";
 const Root = () => {
 
     const [pokemonList, setPokemonList] = useState([]);
-    const [offset, setOffset] = useState(0);
+    const [pokemonShown, setPokemonShown] = useState();
+    const [count, setCount] = useState(0);
+    const limit = 30;
 
     // API Call 
     useEffect(() => {
 
-        axios.get("https://pokeapi.co/api/v2/pokemon/?limit=30&offset=" + offset)
+        axios.get("https://pokeapi.co/api/v2/pokemon/?limit=10000")
             .then(response => {
 
-                setPokemonList(response.data.results)
+                setPokemonList(response.data.results);
             })
-    }, [offset]);
+    }, []);
+
+    useEffect(() => {
+
+        setPokemonShown(pokemonList && pokemonList.filter((pokemon, index) => {
+            return (
+                index >= (limit * count) && index <= (limit - 1) + (limit * count)
+            )
+        }));
+    }, [pokemonList, count])
 
     // Next/Prev Button Press 
-    const handleNext = () => {
-        if (offset !== 1260)
-            setOffset(offset + 30)
-    };
-
     const handlePrev = () => {
-        if (offset !== 0)
-            setOffset(offset - 30)
-    };
+        if (count !== 0)
+            setCount(count - 1)
+    }
+
+    const handleNext = () => {
+        if (count !== (Math.floor(pokemonList.length / limit)))
+            setCount(count + 1)
+    }
 
     // Return 
     return (
@@ -40,7 +51,7 @@ const Root = () => {
                 <button className="pokeButton" onClick={handleNext}>Next Pokemon</button>
             </div>
             <div>
-                {pokemonList.map((pokemon, index) => {
+                {pokemonShown && pokemonShown.map((pokemon, index) => {
                     return (
                         <div className="pokemonLink" key={index}>
                             <Pokemon
@@ -50,7 +61,7 @@ const Root = () => {
                     )
                 })}
             </div>
-            <span>Page {(offset / 30) + 1} of 43</span>
+            <span>Page {count + 1} of {Math.floor(pokemonList.length / limit) + 1}</span>
         </div>
     )
 };

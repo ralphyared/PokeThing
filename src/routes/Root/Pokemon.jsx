@@ -1,13 +1,12 @@
 // Imports 
 import React from "react";
-import _ from "lodash";
 
 // Component 
 const Pokemon = (props) => {
     return (
 
         <a className="pokemonLinkClickable" href={"/" + props.name}>
-            <span className="pokemonLinkText">{_.upperFirst(props.name)}</span>
+            <span className="pokemonLinkText">{props.name}</span>
         </a>
 
     )

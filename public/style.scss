@@ -41,6 +41,7 @@ body {
 .pokemonLinkText {
     font-weight: bold;
     font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
 .pokemonLinkClickable {
@@ -54,6 +55,7 @@ body {
     display: inline-block;
     font-size: 3rem;
     font-weight: bolder;
+    text-transform: capitalize;
 }
 
 .pokemonImg {
@@ -73,6 +75,7 @@ body {
 
 .text {
     display: inline;
+    text-transform: capitalize;
 }
 
 table {
@@ -85,6 +88,7 @@ td {
     height: 1%;
     width: 5%;
     border: 2px solid black;
+    text-transform: capitalize;
 }
 
 // Pokemon Types 

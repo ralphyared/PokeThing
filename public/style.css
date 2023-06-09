@@ -1,268 +1,268 @@
 /* Home */
-
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: lightyellow;
-    text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  background-color: lightyellow;
+  text-align: center;
 }
 
 .logo {
-    height: 8%;
-    width: 35%;
+  height: 8%;
+  width: 35%;
 }
 
 .pokeButton {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    font-size: 1rem;
-    display: inline-block;
-    margin: 1% 2% 3%;
-    background-color: white;
-    background-image: linear-gradient(to bottom, red 50%, rgba(0, 0, 0, 0) 50%);
-    border-radius: 50px;
-    padding: 1%;
-    height: 2%;
-    width: 12%;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 1% 2% 3%;
+  background-color: white;
+  background-image: linear-gradient(to bottom, red 50%, rgba(0, 0, 0, 0) 50%);
+  border-radius: 50px;
+  padding: 1%;
+  height: 2%;
+  width: 12%;
 }
 
 .pokeButton:hover {
-    background-image: linear-gradient(to bottom, #ff6c6f 50%, rgba(0, 0, 0, 0) 50%);
+  background-image: linear-gradient(to bottom, #ff6c6f 50%, rgba(0, 0, 0, 0) 50%);
 }
 
 .pokemonLink {
-    padding: 1%;
-    background-color: white;
-    border: 3px solid black;
-    border-radius: 15px;
-    margin: 1%;
-    display: inline-block;
+  padding: 1%;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 15px;
+  margin: 1%;
+  display: inline-block;
 }
 
 .pokemonLinkText {
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .pokemonLinkClickable {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /* PokemonPage */
-
 .pokemonName {
-    display: inline-block;
-    font-size: 3rem;
-    font-weight: bolder;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bolder;
 }
 
 .pokemonImg {
-    display: inline-block;
-    width: 20%;
-    vertical-align: middle;
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
 }
 
 .pokemonStat {
-    margin: 1%;
+  margin: 1%;
 }
 
 .preText {
-    font-weight: bold;
-    font-size: 1.2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .text {
-    display: inline;
+  display: inline;
 }
 
 table {
-    margin: 1% auto;
-    width: 30%;
-    border-collapse: collapse;
+  margin: 1% auto;
+  width: 30%;
+  border-collapse: collapse;
 }
 
 td {
-    height: 1%;
-    width: 5%;
-    border: 2px solid black;
+  height: 1%;
+  width: 5%;
+  border: 2px solid black;
 }
 
 .normal {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #A8A77A;
+  background-color: #A8A77A;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .fire {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #EE8130;
+  background-color: #EE8130;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .water {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #6390F0;
+  background-color: #6390F0;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .grass {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #7AC74C;
+  background-color: #7AC74C;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .electric {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #F7D02C;
+  background-color: #F7D02C;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .ice {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #96D9D6;
+  background-color: #96D9D6;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .fighting {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #C22E28;
+  background-color: #C22E28;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .poison {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #A33EA1;
+  background-color: #A33EA1;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .ground {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #E2BF65;
+  background-color: #E2BF65;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .flying {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #A98FF3;
+  background-color: #A98FF3;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .psychic {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #F95587;
+  background-color: #F95587;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .bug {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #A6B91A;
+  background-color: #A6B91A;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .rock {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #B6A136;
+  background-color: #B6A136;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .ghost {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #735797;
+  background-color: #735797;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .dark {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #705746;
+  background-color: #705746;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .dragon {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #6F35FC;
+  background-color: #6F35FC;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .steel {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #B7B7CE;
+  background-color: #B7B7CE;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
 
 .fairy {
-    border: 1px solid black;
-    padding: 0.5%;
-    margin-right: 0.5%;
-    border-radius: 7px;
-    color: white;
-    font-weight: bolder;
-    background-color: #D685AD;
+  background-color: #D685AD;
+  border: 1px solid black;
+  padding: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 7px;
+  color: white;
+  font-weight: bolder;
 }
+
+/*# sourceMappingURL=style.css.map */

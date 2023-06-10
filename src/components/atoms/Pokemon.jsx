@@ -5,8 +5,8 @@ import React from "react";
 const Pokemon = (props) => {
     return (
 
-        <a className="pokemonLinkClickable" href={"/" + props.name}>
-            <span className="pokemonLinkText">{props.name}</span>
+        <a href={"/" + props.name}>
+            <span>{props.name}</span>
         </a>
 
     )

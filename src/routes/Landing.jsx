@@ -6,7 +6,7 @@ import pokemonLogo from "../resources/pokemon-logo.png";
 import { Audio } from "react-loader-spinner";
 
 // Component 
-const Root = () => {
+const Landing = () => {
 
     const [pokemonList, setPokemonList] = useState([]);
     const [offset, setOffset] = useState(0)
@@ -22,6 +22,10 @@ const Root = () => {
                 offset: offset
             }
         })
+            .catch(error => {
+
+                console.log(error);
+            })
             .then(response => {
 
                 setTotal(response.data.count);
@@ -73,4 +77,4 @@ const Root = () => {
 };
 
 // Export 
-export default Root;
+export default Landing;

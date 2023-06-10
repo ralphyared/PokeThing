@@ -2,14 +2,16 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root";
+import Landing from "./routes/Landing";
 import PokemonDetails from "./routes/PokemonDetails";
+import ErrorPage from "./routes/ErrorPage";
 
 // Routes 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />
+        element: <Landing />,
+        errorElement: <ErrorPage />
     },
     {
         path: "/:name",

@@ -4,7 +4,13 @@
 }
 
 .pokeButton {
-    font-family: 'Courier New', Courier, monospace;
+    &:hover {
+        background-image: linear-gradient(to bottom, #ff6c6f 50%, rgba(0, 0, 0, 0) 50%);
+    }
+
+    font-family: 'Courier New',
+    Courier,
+    monospace;
     font-weight: bolder;
     font-size: 1rem;
     display: inline-block;
@@ -17,26 +23,23 @@
     width: 12%;
 }
 
-.pokeButton:hover {
-    background-image: linear-gradient(to bottom, #ff6c6f 50%, rgba(0, 0, 0, 0) 50%);
-}
 
 .pokemonLink {
+    span {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
     padding: 1%;
     background-color: white;
     border: 3px solid black;
     border-radius: 15px;
     margin: 1%;
     display: inline-block;
-}
-
-.pokemonLinkText {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-}
-
-.pokemonLinkClickable {
-    text-decoration: none;
-    color: black;
 }

@@ -1,0 +1,125 @@
+.pokemonName {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.pokemonImg {
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+}
+
+.pokemonStat {
+    margin: 1%;
+
+    span {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    div {
+        display: inline;
+        text-transform: capitalize;
+    }
+}
+
+
+.pokemonStatsTable {
+    margin: 1% auto;
+    width: 30%;
+    border-collapse: collapse;
+
+    td {
+        height: 1%;
+        width: 5%;
+        border: 2px solid black;
+        text-transform: capitalize;
+    }
+}
+
+
+// Pokemon Types 
+
+@mixin type($type: #A8A77A) {
+    background-color: $type;
+    border: 1px solid black;
+    padding: 0.5%;
+    margin-right: 0.5%;
+    border-radius: 7px;
+    color: white;
+    font-weight: bolder;
+}
+
+.normal {
+    @include type;
+}
+
+.fire {
+    @include type($type: #EE8130);
+}
+
+.water {
+    @include type($type: #6390F0);
+}
+
+.grass {
+    @include type($type: #7AC74C);
+}
+
+.electric {
+    @include type($type: #F7D02C);
+}
+
+.ice {
+    @include type($type: #96D9D6);
+}
+
+.fighting {
+    @include type($type: #C22E28);
+}
+
+.poison {
+    @include type($type: #A33EA1);
+}
+
+.ground {
+    @include type($type: #E2BF65);
+}
+
+.flying {
+    @include type($type: #A98FF3);
+}
+
+.psychic {
+    @include type($type: #F95587);
+}
+
+.bug {
+    @include type($type: #A6B91A);
+}
+
+.rock {
+    @include type($type: #B6A136);
+}
+
+.ghost {
+    @include type($type: #735797);
+}
+
+.dark {
+    @include type($type: #705746);
+}
+
+.dragon {
+    @include type($type: #6F35FC);
+}
+
+.steel {
+    @include type($type: #B7B7CE);
+}
+
+.fairy {
+    @include type($type: #D685AD);
+}

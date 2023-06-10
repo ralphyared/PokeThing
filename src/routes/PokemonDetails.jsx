@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import _ from "lodash";
-import PokemonInfo from "./PokemonInfo";
+import PokemonInfo from "../components/atoms/PokemonInfo";
 
 // Component 
 const PokemonPage = () => {

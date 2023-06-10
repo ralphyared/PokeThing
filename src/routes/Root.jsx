@@ -1,8 +1,8 @@
 // Imports
 import React, { Suspense, useEffect, useState } from "react";
 import axios from "axios";
-import Pokemon from "./Pokemon";
-import pokemonLogo from "../../resources/pokemon-logo.png";
+import Pokemon from "../components/atoms/Pokemon";
+import pokemonLogo from "../resources/pokemon-logo.png";
 import { Audio } from "react-loader-spinner";
 
 // Component 
@@ -48,25 +48,25 @@ const Root = () => {
                 <button className="pokeButton" onClick={handlePrev}>Prev Pokemon</button>
                 <button className="pokeButton" onClick={handleNext}>Next Pokemon</button>
             </div>
-            <div>
-                {pokemonList && pokemonList.map((pokemon, index) => {
-                    return (
-                        <Suspense fallback={<Audio
-                            height="80"
-                            width="80"
-                            radius="9"
-                            color="green"
-                            ariaLabel="loading" />}
-                        >
-                            <div className="pokemonLink" key={index}>
+            <Suspense fallback={<Audio
+                height="80"
+                width="80"
+                radius="9"
+                color="black"
+                ariaLabel="loading" />}
+            >
+                <div>
+                    {pokemonList && pokemonList.map((pokemon) => {
+                        return (
+                            <div className="pokemonLink" key={pokemon.name}>
                                 <Pokemon
                                     name={pokemon.name}
                                 />
                             </div>
-                        </Suspense>
-                    )
-                })}
-            </div>
+                        )
+                    })}
+                </div>
+            </Suspense>
             <span>Page {(offset / limit) + 1} of {Math.floor(total / limit) + 1}</span>
         </div>
     )

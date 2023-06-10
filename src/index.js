@@ -2,8 +2,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root/Root";
-import PokemonPage from "./routes/PokemonPage/PokemonPage";
+import Root from "./routes/Root";
+import PokemonDetails from "./routes/PokemonDetails";
 
 // Routes 
 const router = createBrowserRouter([
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/:name",
-        element: <PokemonPage />
+        element: <PokemonDetails />
     }
 ])
 

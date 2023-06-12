@@ -4,10 +4,12 @@ import axios from "axios";
 import Pokemon from "../components/atoms/Pokemon";
 import pokemonLogo from "../resources/pokemon-logo.png";
 import { Audio } from "react-loader-spinner";
+import { useErrorBoundary } from "react-error-boundary";
 
 // Component 
 const Landing = () => {
 
+    const { showBoundary } = useErrorBoundary;
     const [pokemonList, setPokemonList] = useState([]);
     const [offset, setOffset] = useState(0)
     const [total, setTotal] = useState(0)
@@ -22,15 +24,15 @@ const Landing = () => {
                 offset: offset
             }
         })
-            .catch(error => {
-
-                console.log(error);
-            })
             .then(response => {
 
                 setTotal(response.data.count);
                 setPokemonList(response.data.results);
-            })
+            },
+                error => {
+
+                    showBoundary(error);
+                })
     }, [offset]);
 
     // Next/Prev Button Press 

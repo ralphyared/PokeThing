@@ -1,27 +1,24 @@
 // Imports 
-import React from "react";
+import React, { lazy } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Landing from "./routes/Landing";
-import PokemonDetails from "./routes/PokemonDetails";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 import ErrorPage from "./routes/ErrorPage";
 
-// Routes 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Landing />,
-        errorElement: <ErrorPage />
-    },
-    {
-        path: "/:name",
-        element: <PokemonDetails />
-    }
-])
+// Lazy 
+const Landing = lazy(() => import("./routes/Landing"));
+const PokemonDetails = lazy(() => import("./routes/PokemonDetails"));
 
-// Render 
+// Routes 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
-    <RouterProvider router={router} />
+    <Router>
+        <ErrorBoundary FallbackComponent={ErrorPage}>
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/:name" element={<PokemonDetails />} />
+            </Routes>
+        </ErrorBoundary>
+    </Router>
 );

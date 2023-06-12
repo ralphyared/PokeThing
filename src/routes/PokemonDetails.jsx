@@ -4,10 +4,12 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import _ from "lodash";
 import PokemonInfo from "../components/atoms/PokemonInfo";
+import { useErrorBoundary } from "react-error-boundary";
 
 // Component 
 const PokemonPage = () => {
 
+    const { showBoundary } = useErrorBoundary();
     const pokemonName = useParams();
     const [pokemonStats, setPokemonStats] = useState();
 
@@ -17,7 +19,11 @@ const PokemonPage = () => {
             .then(response => {
 
                 setPokemonStats(response.data)
-            })
+            },
+                error => {
+
+                    showBoundary(error);
+                })
     }, [])
 
     // Return 

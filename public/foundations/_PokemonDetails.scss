@@ -1,19 +1,19 @@
 .pokemonName {
+    margin: 0;
     display: inline-block;
     font-size: 3rem;
     font-weight: bolder;
     text-transform: capitalize;
+    text-decoration: underline;
 }
 
 .pokemonImg {
     display: inline-block;
-    width: 20%;
+    width: 18%;
     vertical-align: middle;
 }
 
 .pokemonStat {
-    margin: 1%;
-
     span {
         font-weight: bold;
         font-size: 1.2rem;
@@ -36,6 +36,18 @@
         width: 5%;
         border: 2px solid black;
         text-transform: capitalize;
+    }
+}
+
+@media (max-width:800px) {
+    .pokemonStatsTable {
+        width: 70%;
+    }
+}
+
+@media (max-width:400px) {
+    .pokemonStatsTable {
+        width: 100%;
     }
 }
 

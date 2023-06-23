@@ -3,13 +3,13 @@ import React, { Suspense, useEffect, useState } from "react";
 import axios from "axios";
 import Pokemon from "../components/atoms/Pokemon";
 import pokemonLogo from "../resources/pokemon-logo.png";
-import { Audio } from "react-loader-spinner";
 import { useErrorBoundary } from "react-error-boundary";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Spinner from "react-bootstrap/Spinner";
 
 // Component 
 const Landing = () => {
@@ -66,12 +66,7 @@ const Landing = () => {
                 <Button className="pokeButton" variant="light" onClick={handlePrev} disabled={offset === 0 ? true : false}>Prev Pokemon</Button>
                 <Button className="pokeButton" variant="light" onClick={handleNext} disabled={(offset / limit) === Math.floor(total / limit) ? true : false}>Next Pokemon</Button>
             </div>
-            <Suspense fallback={<Audio
-                height="80"
-                width="80"
-                radius="9"
-                color="black"
-                ariaLabel="loading" />}
+            <Suspense fallback={<Spinner />}
             >
                 <Container>
                     {pokemonList && pokemonList.map((pokemon) => {

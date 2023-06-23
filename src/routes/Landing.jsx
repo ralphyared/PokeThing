@@ -5,6 +5,11 @@ import Pokemon from "../components/atoms/Pokemon";
 import pokemonLogo from "../resources/pokemon-logo.png";
 import { Audio } from "react-loader-spinner";
 import { useErrorBoundary } from "react-error-boundary";
+import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 // Component 
 const Landing = () => {
@@ -48,11 +53,18 @@ const Landing = () => {
 
     // Return 
     return (
-        <div className="homePage">
-            <img className="logo" src={pokemonLogo} alt="Pokemon!" />
+        <Container className="homePage">
+            <Row className="logo">
+                <Col />
+                <Col md={12} lg={6}>
+                    <Image src={pokemonLogo} alt="Pokemon!" fluid />
+                </Col>
+                <Col />
+            </Row>
+            <span>Page {(offset / limit) + 1} of {Math.floor(total / limit) + 1}</span>
             <div>
-                <button className="pokeButton" onClick={handlePrev}>Prev Pokemon</button>
-                <button className="pokeButton" onClick={handleNext}>Next Pokemon</button>
+                <Button className="pokeButton" variant="light" onClick={handlePrev} disabled={offset === 0 ? true : false}>Prev Pokemon</Button>
+                <Button className="pokeButton" variant="light" onClick={handleNext} disabled={(offset / limit) === Math.floor(total / limit) ? true : false}>Next Pokemon</Button>
             </div>
             <Suspense fallback={<Audio
                 height="80"
@@ -61,7 +73,7 @@ const Landing = () => {
                 color="black"
                 ariaLabel="loading" />}
             >
-                <div>
+                <Container>
                     {pokemonList && pokemonList.map((pokemon) => {
                         return (
                             <div className="pokemonLink" key={pokemon.name}>
@@ -71,10 +83,9 @@ const Landing = () => {
                             </div>
                         )
                     })}
-                </div>
+                </Container>
             </Suspense>
-            <span>Page {(offset / limit) + 1} of {Math.floor(total / limit) + 1}</span>
-        </div>
+        </Container>
     )
 };
 
